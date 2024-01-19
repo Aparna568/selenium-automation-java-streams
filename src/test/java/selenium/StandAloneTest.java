@@ -1,0 +1,43 @@
+package selenium;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class StandAloneTest {
+
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+String productName = "ZARA COAT 3";
+WebDriver driver = new ChromeDriver();
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+driver.get("https://rahulshettyacademy.com/client");
+driver.findElement(By.id("userEmail")).sendKeys("aparnasabb@gmail.com");
+driver.findElement(By.id("userPassword")).sendKeys("qwertyuiop@1A");
+driver.findElement(By.id("login")).click();
+List<WebElement> products = driver.findElements(By.xpath("//div[contains(@class,'mb-3')]"));
+WebElement product = products.stream().filter(s->s.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null);
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
+
+	product.findElement(By.xpath("//div[@class='container']//div[1]//div[1]//div[1]//button[2]")).click();
+	
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("toast-container")));
+	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("ng-animating")));
+	driver.findElement(By.xpath("//button[@routerlink='/dashboard/cart']")).click();
+	List<WebElement> cartItem = driver.findElements(By.xpath("//div[@class='cartSection']//h3"));
+	Boolean match = cartItem.stream().anyMatch(s->s.getText().equalsIgnoreCase(productName));
+	
+	Assert.assertTrue(match);
+}
+}
