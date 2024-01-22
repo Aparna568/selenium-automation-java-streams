@@ -1,4 +1,4 @@
-package pageObjects;
+package ecommerce.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,16 +23,21 @@ public class LoginPage extends Utillities{
 	@FindBy(id="login")
 	private WebElement login;
 	
-	public void enterEmail(String id) {
+	public void goTo() {
+		openUrl("https://rahulshettyacademy.com/client");
+	}
+	public LoginPage enterEmail(String id) {
 		email.sendKeys(id);
-	}
-	public void enterPassword(String passwd) {
-		password.sendKeys(passwd);
-		
-	}
-	public void enterClick() {
-		login.click();
+		return this;
 	}
 	
+	public LoginPage enterPassword(String passwd) {
+		password.sendKeys(passwd);
+		return this;
+	}
+	public ProductsPage enterClick() {
+clickMethod(login);	
+	return new ProductsPage(driver);
+	}
 	
 }
