@@ -25,6 +25,9 @@ public ProductsPage(WebDriver driver) {
 	 @FindBy(xpath="//button[@routerlink='/dashboard/cart']")
 	 private WebElement cart;
 //	 By product =By.cssSelector("b");
+	 
+	 @FindBy(xpath="//button[@routerlink='/dashboard/myorders']")
+	 private WebElement orderButton;
 	public  List<WebElement> getList(){
 		implicitWait();
 		return products;
@@ -47,6 +50,11 @@ public ProductsPage visibiltyOfElement() {
 public CartPage cart() {
 	clickMethod(cart);
 	return new CartPage(driver);
+	
+}
+public OrdersPage ordervalid() {
+	clickMethod(orderButton);
+	return new OrdersPage(driver);
 	
 }
 }

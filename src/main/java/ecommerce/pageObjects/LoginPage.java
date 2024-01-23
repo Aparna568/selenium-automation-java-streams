@@ -13,13 +13,15 @@ public class LoginPage extends Utillities{
 	 this.driver =driver;
 	 PageFactory.initElements(driver, this);
  }
+	@FindBy(css ="[class*='flyInOut']")
+	private WebElement errorMess;
 	
 	@FindBy(id="userEmail")
 	private WebElement email;
 	
 	@FindBy(id="userPassword")
 	private WebElement password;
-	
+
 	@FindBy(id="login")
 	private WebElement login;
 	
@@ -38,6 +40,12 @@ public class LoginPage extends Utillities{
 	public ProductsPage enterClick() {
 clickMethod(login);	
 	return new ProductsPage(driver);
+	}
+	public String errorWake() {
+		explicitWaitEle(driver, errorMess, 5);
+		return errorMess.getText();
+
+		
 	}
 	
 }

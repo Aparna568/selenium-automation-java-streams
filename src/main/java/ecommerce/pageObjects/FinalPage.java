@@ -16,11 +16,9 @@ public class FinalPage extends Utillities{
 	@FindBy(css=".hero-primary")
 	private WebElement message;
 	
-	public void getMessage(String actual) {
+	public String getMessage() {
 		String messg = message.getText();
 		System.out.println(messg);
-		Assert.assertTrue(messg.equalsIgnoreCase(actual));
-		
-
+		return messg;
 	}
 }

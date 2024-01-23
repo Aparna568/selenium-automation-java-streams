@@ -1,15 +1,21 @@
 package ecommerce.pageObjects;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utillities {
 WebDriver driver;
+@FindBy(xpath="//button[@class ='btn btn-custom'and @routerlink='/dashboard/' ]']")
+private WebElement orderButton;
+
+
 
 public Utillities(WebDriver driver) {
 	this.driver = driver;
@@ -23,6 +29,12 @@ public WebElement explicitWait(WebDriver driver,By locator, int timeout) {
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	return driver.findElement(locator);
+	
+}
+public WebElement explicitWaitEle(WebDriver driver,WebElement  element, int timeout) {
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+	wait.until(ExpectedConditions.visibilityOf(element));
+	return element;
 	
 }
 public WebElement explicitWaitby(WebDriver driver,WebElement element, int timeout) {
@@ -39,4 +51,5 @@ public void clickMethod(WebElement element) {
 public void openUrl(String URL) {
 	driver.get(URL);
 }
+
 }

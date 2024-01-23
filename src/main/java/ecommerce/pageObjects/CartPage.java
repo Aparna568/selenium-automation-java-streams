@@ -22,13 +22,12 @@ private List<WebElement> cartList;
 @FindBy(xpath="//button[text()='Checkout']")
 private WebElement checkout;
 
-public CartPage listCart(String productName) {
-	Boolean match = cartList.stream().anyMatch(s->s.getText().equalsIgnoreCase(productName));
-	Assert.assertTrue(match);
-	return this;
+public boolean listCart(String productName) {
+	return cartList.stream().anyMatch(s->s.getText().equalsIgnoreCase(productName));
 }
-public void checkoutButton() {
+public CheckoutPage checkoutButton() {
 	clickMethod(checkout);
+	return new CheckoutPage(driver);
 }
 
 }

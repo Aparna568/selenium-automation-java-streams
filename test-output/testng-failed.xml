@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="BasePage(failed)">
+    <classes>
+      <class name="selenium.BasePage">
+        <methods>
+          <include name="testMethod"/>
+        </methods>
+      </class> <!-- selenium.BasePage -->
+    </classes>
+  </test> <!-- BasePage(failed) -->
+</suite> <!-- Failed suite [Suite] -->
