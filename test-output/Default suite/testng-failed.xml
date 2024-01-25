@@ -5,9 +5,9 @@
     <classes>
       <class name="selenium.ErrorValidation">
         <methods>
-          <include name="productValidationTest"/>
+          <include name="productValidationTest" invocation-numbers="1"/>
           <include name="launchApplication"/>
-          <include name="orderValidation"/>
+          <include name="closeApplication"/>
         </methods>
       </class> <!-- selenium.ErrorValidation -->
     </classes>

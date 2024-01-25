@@ -32,8 +32,8 @@ public class BasePage{
 		login.enterPassword("Dwight1@");
 		login.enterClick();
 		ProductsPage prod = new ProductsPage(driver);
-		prod.selectProduct(productName);
-		prod.addToCartIcon();
+		prod.getProductByName(productName);
+		prod.addToCartIcon(productName);
 		prod.visibiltyOfElement();
 		prod.cart();
 		CartPage cartPage = new CartPage(driver);

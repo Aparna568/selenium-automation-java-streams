@@ -20,6 +20,7 @@ public ProductsPage(WebDriver driver) {
 	
 	@FindBy(xpath="//div[@class='container']//div[1]//div[1]//div[1]//button[2]")
 	private WebElement addToCart;
+	
 	private By container = By.id("toast-container");
 	 private By backDrop= By.cssSelector(".ng-animating");
 	 @FindBy(xpath="//button[@routerlink='/dashboard/cart']")
@@ -33,14 +34,17 @@ public ProductsPage(WebDriver driver) {
 		return products;
 	}
 
-	public ProductsPage selectProduct(String productName) {
-		getList().stream().filter(s->s.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null);		
-		return this;
+	public WebElement getProductByName(String productName) {
+		WebElement prod =getList().stream().filter(s->s.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null);	
+		return prod;
+		}
+		
+	public ProductsPage addToCartIcon(String productName) {
+	 WebElement product =getProductByName(productName);
+	 product.findElement(By.cssSelector(".card-body button:last-of-type")).click();
+	 return this;
 	}
-public ProductsPage addToCartIcon() {
-	addToCart.click();
-	return this;
-}
+
 public ProductsPage visibiltyOfElement() {
 	explicitWait(driver,container, 5);
 	explicitWaitby(driver,driver.findElement(backDrop),5);

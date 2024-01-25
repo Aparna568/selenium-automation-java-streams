@@ -20,8 +20,8 @@ public class TestOrder extends BaseTest {
 		login.enterEmail("aparnasabb@gmail.com");
 		login.enterPassword("qwertyuiop@1A");
 		ProductsPage prod =login.enterClick();
-		prod.selectProduct(productName);
-		prod.addToCartIcon();
+		prod.getProductByName(productName);
+		prod.addToCartIcon(productName);
 		prod.visibiltyOfElement();
 		CartPage cartPage  = prod.cart();
 		Boolean match = cartPage.listCart(productName);
