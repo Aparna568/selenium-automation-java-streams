@@ -3,6 +3,8 @@ package selenium;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -64,6 +66,12 @@ public Object[][]  getData() throws IOException {
 
 List<HashMap<String,String>> data = 	getJsonDataToMap(System.getProperty("user.dir")+"//src//test//java//ecommerce//data//PurchaseOrder.json");
 return new Object[][] {{data.get(0)}, {data.get(1)}};
+}
+public void configuration() {
+String path = System.getProperty("user.dir"+"\\reports\\index.html");
+ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+reporter.config().setReportName("Automation Results");
+reporter.config().setDocumentTitle("Test Report");
 }
 
 }

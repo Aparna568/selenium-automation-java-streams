@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-24T19:30:53 GMT-05:00" name="Default suite" finished-at="2024-01-24T19:31:23 GMT-05:00" duration-ms="29628">
+  <suite started-at="2024-01-29T12:32:30 GMT-05:00" name="Suite" finished-at="2024-01-29T12:34:04 GMT-05:00" duration-ms="93947">
     <groups>
       <group name="ErrorHandling">
-        <method signature="ErrorValidation.productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@17f7cd29]" name="productValidationTest" class="selenium.ErrorValidation"/>
+        <method signature="ErrorValidation.productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@3571b748]" name="productValidationTest" class="selenium.ErrorValidation"/>
       </group> <!-- ErrorHandling -->
       <group name="purchase">
-        <method signature="ErrorValidation.productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@17f7cd29]" name="productValidationTest" class="selenium.ErrorValidation"/>
+        <method signature="ErrorValidation.productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@3571b748]" name="productValidationTest" class="selenium.ErrorValidation"/>
       </group> <!-- purchase -->
     </groups>
-    <test started-at="2024-01-24T19:30:53 GMT-05:00" name="Default test" finished-at="2024-01-24T19:31:23 GMT-05:00" duration-ms="29628">
+    <test started-at="2024-01-29T12:32:30 GMT-05:00" name="BasePage" finished-at="2024-01-29T12:32:51 GMT-05:00" duration-ms="21015">
+      <class name="selenium.BasePage">
+        <test-method signature="testMethod()[pri:0, instance:selenium.BasePage@544fa968]" started-at="2024-01-29T12:32:30 GMT-05:00" name="testMethod" finished-at="2024-01-29T12:32:51 GMT-05:00" duration-ms="20874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+      </class> <!-- selenium.BasePage -->
+    </test> <!-- BasePage -->
+    <test started-at="2024-01-29T12:32:53 GMT-05:00" name="ErrorValidation" finished-at="2024-01-29T12:33:50 GMT-05:00" duration-ms="56999">
       <class name="selenium.ErrorValidation">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:selenium.ErrorValidation@17f7cd29]" started-at="2024-01-24T19:30:54 GMT-05:00" name="launchApplication" finished-at="2024-01-24T19:31:02 GMT-05:00" duration-ms="8971" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:32:57 GMT-05:00" name="launchApplication" finished-at="2024-01-29T12:33:05 GMT-05:00" duration-ms="7526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@17f7cd29]" started-at="2024-01-24T19:31:02 GMT-05:00" name="productValidationTest" data-provider="dataP" finished-at="2024-01-24T19:31:08 GMT-05:00" duration-ms="5483" status="PASS">
+        <test-method signature="productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:05 GMT-05:00" name="productValidationTest" data-provider="dataP" finished-at="2024-01-29T12:33:10 GMT-05:00" duration-ms="5618" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,15 +36,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productValidationTest -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:selenium.ErrorValidation@17f7cd29]" started-at="2024-01-24T19:31:08 GMT-05:00" name="closeApplication" finished-at="2024-01-24T19:31:08 GMT-05:00" duration-ms="234" status="PASS">
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:10 GMT-05:00" name="closeApplication" finished-at="2024-01-29T12:33:10 GMT-05:00" duration-ms="325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:selenium.ErrorValidation@17f7cd29]" started-at="2024-01-24T19:31:08 GMT-05:00" name="launchApplication" finished-at="2024-01-24T19:31:17 GMT-05:00" duration-ms="8715" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:10 GMT-05:00" name="launchApplication" finished-at="2024-01-29T12:33:24 GMT-05:00" duration-ms="13326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@17f7cd29]" started-at="2024-01-24T19:31:17 GMT-05:00" name="productValidationTest" data-provider="dataP" finished-at="2024-01-24T19:31:22 GMT-05:00" duration-ms="5558" status="PASS">
+        <test-method signature="productValidationTest(java.util.HashMap)[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:24 GMT-05:00" name="productValidationTest" data-provider="dataP" finished-at="2024-01-29T12:33:29 GMT-05:00" duration-ms="5287" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,11 +55,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productValidationTest -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:selenium.ErrorValidation@17f7cd29]" started-at="2024-01-24T19:31:22 GMT-05:00" name="closeApplication" finished-at="2024-01-24T19:31:23 GMT-05:00" duration-ms="261" status="PASS">
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:29 GMT-05:00" name="closeApplication" finished-at="2024-01-29T12:33:29 GMT-05:00" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:29 GMT-05:00" name="launchApplication" finished-at="2024-01-29T12:33:38 GMT-05:00" duration-ms="9135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginValidationTest()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:38 GMT-05:00" name="loginValidationTest" finished-at="2024-01-29T12:33:40 GMT-05:00" duration-ms="1183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidationTest -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:40 GMT-05:00" name="closeApplication" finished-at="2024-01-29T12:33:40 GMT-05:00" duration-ms="313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:40 GMT-05:00" name="launchApplication" finished-at="2024-01-29T12:33:48 GMT-05:00" duration-ms="7602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderValidation()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:48 GMT-05:00" name="orderValidation" finished-at="2024-01-29T12:33:49 GMT-05:00" depends-on-methods="selenium.ErrorValidation.productValidationTest" duration-ms="1786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderValidation -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:selenium.ErrorValidation@3571b748]" started-at="2024-01-29T12:33:49 GMT-05:00" name="closeApplication" finished-at="2024-01-29T12:33:50 GMT-05:00" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
       </class> <!-- selenium.ErrorValidation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- ErrorValidation -->
+    <test started-at="2024-01-29T12:33:50 GMT-05:00" name="TestOrder" finished-at="2024-01-29T12:34:04 GMT-05:00" duration-ms="14354">
+      <class name="ecommerce.tests.TestOrder">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:ecommerce.tests.TestOrder@236e3f4e]" started-at="2024-01-29T12:33:50 GMT-05:00" name="launchApplication" finished-at="2024-01-29T12:33:58 GMT-05:00" duration-ms="8422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testMethod()[pri:0, instance:ecommerce.tests.TestOrder@236e3f4e]" started-at="2024-01-29T12:33:58 GMT-05:00" name="testMethod" finished-at="2024-01-29T12:34:04 GMT-05:00" duration-ms="5919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:ecommerce.tests.TestOrder@236e3f4e]" started-at="2024-01-29T12:34:04 GMT-05:00" name="closeApplication" finished-at="2024-01-29T12:34:04 GMT-05:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- ecommerce.tests.TestOrder -->
+    </test> <!-- TestOrder -->
+  </suite> <!-- Suite -->
 </testng-results>
