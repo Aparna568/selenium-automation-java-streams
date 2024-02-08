@@ -13,10 +13,11 @@ import ecommerce.pageObjects.CheckoutPage;
 import ecommerce.pageObjects.FinalPage;
 import ecommerce.pageObjects.LoginPage;
 import ecommerce.pageObjects.ProductsPage;
+import ecommerce.tests.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class BasePage{
+public class BasePage extends BaseTest{
 
 @Test
 	public void testMethod() throws IOException {
@@ -45,7 +46,6 @@ public class BasePage{
 		FinalPage finalPage = new FinalPage(driver);
 		String confirmationMessage =finalPage.getMessage();
 		Assert.assertEquals(confirmationMessage, actual);
-		driver.quit();
 	}
 
 }

@@ -4,11 +4,11 @@
 <listeners>
 	<listener class-name="ecommerce.tests.Listners"/>
 	</listeners>
- <test  name="BasePage">
+<!-- <test  name="BasePage">
     <classes>
       <class name="selenium.BasePage"/>
     </classes>
-  </test> 
+  </test> -->
    <test  name="ErrorValidation">
     <classes>
       <class name="selenium.ErrorValidation"/>

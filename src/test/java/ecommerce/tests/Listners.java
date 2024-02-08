@@ -3,6 +3,7 @@ package ecommerce.tests;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -15,6 +16,7 @@ import ecommerce.resources.ExtentReportConfiguration;
 
 public class Listners extends BaseTest  implements ITestListener {
 	ExtentTest test ;
+	ThreadLocal<ExtentTest> threadLocal = new ThreadLocal<ExtentTest>();
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -36,12 +38,12 @@ public class Listners extends BaseTest  implements ITestListener {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestFailure(result);
 		test.fail(result.getThrowable());		
+
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	
 		String filePath = null;
 		try {
 			filePath = takeScreenshotMethod(result.getMethod().getMethodName(),driver);

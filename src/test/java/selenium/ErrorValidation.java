@@ -12,6 +12,7 @@ import java.util.List;
 
 import org.testng.Assert;
 
+import ecommerce.data.DataReader;
 import ecommerce.pageObjects.CartPage;
 import ecommerce.pageObjects.CheckoutPage;
 import ecommerce.pageObjects.FinalPage;
@@ -67,11 +68,6 @@ public Object[][]  getData() throws IOException {
 List<HashMap<String,String>> data = 	getJsonDataToMap(System.getProperty("user.dir")+"//src//test//java//ecommerce//data//PurchaseOrder.json");
 return new Object[][] {{data.get(0)}, {data.get(1)}};
 }
-public void configuration() {
-String path = System.getProperty("user.dir"+"\\reports\\index.html");
-ExtentSparkReporter reporter = new ExtentSparkReporter(path);
-reporter.config().setReportName("Automation Results");
-reporter.config().setDocumentTitle("Test Report");
-}
+
 
 }
