@@ -11,12 +11,14 @@ import org.apache.commons.io.FileUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class DataReader {public List<HashMap<String,String>>  getJsonDataToMap() throws IOException {
-	String jsonContentLocation = FileUtils.readFileToString(new File(System.getProperty("User.dir")+"//src//test//java//ecommerce//data//PurchaseOrder.json"),StandardCharsets.UTF_8);
+public class DataReader {
+	public List<HashMap<String,String>>  getJsonDataToMap(String path) throws IOException {
+		File file = new File(path);
+	String jsonContentLocation = FileUtils.readFileToString(file,StandardCharsets.UTF_8);
 	
 	ObjectMapper mapper = new ObjectMapper();
-	List<HashMap<String,String>> data =mapper.readValue(jsonContentLocation, new TypeReference<List<HashMap<String, String>>>(){});
-	return  data;
+	List<HashMap<String,String>> datum =mapper.readValue(jsonContentLocation, new TypeReference<List<HashMap<String, String>>>(){});
+	return  datum;
 	
 	}
 }
